@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+//==  Colors
+
+$color-dark: #242323;
+$color-hazed: #313131;
+$color-blue-dark: #004A9F;
+$color-blue-light: #0184D5;
+$color-grey-dark: #808080;
+$color-grey: #e6e4e4;
+$color-toned: #E7EDF3;
+$color-white: #FAFAFA;
+
+//==  Fonts
+
+$default-font:'Roboto', sans-serif;
+$menu-font:'Raleway', sans-serif;
+
+//== Mixins
+
+.linear-transition {
+transition-property: opacity, filter;
+transition-duration: 0.65s;
+transition-timing-function: linear;
+}
+
+.ease-transition {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.centered-background {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.box-shadow {
+	--webkit-box-shadow: 4px 0px 20px -7px rgba(115,15,15,1);
+	-moz-box-shadow: 4px 0px 20px -7px rgba(115,15,15,1);
+	box-shadow: 4px 0px 20px -7px rgba(115,15,15,1);
+}
+
+//== Global
+
+body {
+  font-family: $default-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-blue-dark;
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+  background: $color-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-white;
+}

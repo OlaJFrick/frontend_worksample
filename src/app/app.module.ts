@@ -7,10 +7,12 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awes
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { StartScreenComponent } from './start-screen/start-screen.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartScreenComponent
   ],
   imports: [
     FormsModule,
