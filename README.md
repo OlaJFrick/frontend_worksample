@@ -1,6 +1,6 @@
-# Frontend Worksample
+# Frontend Worksample for Odd Hill
 
-### Created june 2017 using JS/Node.js and mainly: 
+### Created july 2017 
 
 ![alt](./src/assets/images/worksample_icon.png)
 
