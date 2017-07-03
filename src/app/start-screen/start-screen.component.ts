@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartScreenComponent implements OnInit {
 
+  welcomeMsg = "Explore the world's top invoice manager"
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+
   }
 
 }

@@ -1,6 +1,40 @@
 @import '../../styles.scss';
 
-.nice-header {
-  font-size: 10px;
-  color: $color-grey;
+.startscreen-content {
+  position: relative;
+  background: red;
+  width: 100vw;
+  height: 100vh;
+
+  .msg {
+    position: absolute;
+    bottom: 16vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    color: $color-white;
+
+    .welcome-header {
+      font-size: 1.5em;
+      font-family: $fancy-font;
+    }
+
+    .enter-icon {
+      padding-top: 4vh;
+
+      .i-circle {
+        width: 70px;
+        height: 70px;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        .i-check { 
+          font-size: 2.8em; 
+        }
+      }
+    }
+  }
 }
