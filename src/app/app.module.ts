@@ -12,7 +12,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
+    HttpModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot()
   ],
   providers: [],
