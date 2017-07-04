@@ -8,11 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { StartScreenComponent } from './start-screen/start-screen.component';
+import { HomeComponent } from './home/home.component';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartScreenComponent
+    StartScreenComponent,
+    HomeComponent,
+    OrderByPipe
   ],
   imports: [
     FormsModule,

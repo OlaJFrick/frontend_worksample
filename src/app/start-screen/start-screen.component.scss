@@ -1,39 +1,73 @@
 @import '../../styles.scss';
 
-.startscreen-content {
-  position: relative;
-  background: red;
+.intro {
+  position: fixed;
+  background: $color-blue-dark;
   width: 100vw;
   height: 100vh;
 
-  .msg {
-    position: absolute;
-    bottom: 16vh;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin: 0 auto;
-    width: 300px;
-    color: $color-white;
-
-    .welcome-header {
-      font-size: 1.5em;
+    .msg {
+      position: absolute;
+      bottom: 40vh;
+      left: 0;
+      right: 0;
+      width: 500px;
+      text-align: center;
+      margin: 0 auto;
+      color: $color-white;
+      font-size: 2em;
       font-family: $fancy-font;
     }
+}
 
-    .enter-icon {
-      padding-top: 4vh;
+.startscreen-content {
+  position: fixed;
+  background: url('../../assets/images/business.jpg');
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 
-      .i-circle {
-        width: 70px;
-        height: 70px;
-        border: 2px solid $color-white;
-        border-radius: 50%;
-        margin: 0 auto;
+  .screen-shader {
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,74,159,0.6);
 
-        .i-check { 
-          font-size: 2.8em; 
+    .msg {
+      position: absolute;
+      bottom: 16vh;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin: 0 auto;
+      width: 300px;
+      color: $color-white;
+
+      .welcome-header {
+        font-size: 1.5em;
+        font-family: $fancy-font;
+        padding-bottom: 4vh;
+      }
+
+      .enter-icon {
+
+        .i-circle {
+          width: 70px;
+          height: 70px;
+          border: 2px solid $color-white;
+          border-radius: 50%;
+          margin: 0 auto;
+          @include ease-transition;
+
+          .i-check { 
+            font-size: 2.8em; 
+          }
         }
+        
+        .i-circle:hover {
+          background: rgba(255,255,255,0.3);
+        }
+        
       }
     }
   }

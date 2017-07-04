@@ -27,7 +27,7 @@ transition-duration: 0.65s;
 transition-timing-function: linear;
 }
 
-.ease-transition {
+@mixin ease-transition {
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
