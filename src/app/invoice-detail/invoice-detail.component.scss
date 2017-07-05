@@ -1,0 +1,40 @@
+@import '../../styles.scss';
+
+
+.detail-card {
+  background: $color-blue-dark;
+  width: 24rem;
+  top: 10rem;
+  padding: 0;
+  border: 0;
+  @include box-shadow;
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-block {
+    padding: 1.6rem;
+    background: $color-white;
+
+    .card-title {
+      font-size: 22px;
+      color: $color-blue-light;
+    }
+    .detail-table {
+      font-size: 13px;
+      color: $color-grey-dark;
+      width: 100%;
+      padding: 20px;
+
+      th {
+        font-size: 12px;
+        width: 50%;
+      }
+      td {
+        vertical-align: text-top;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

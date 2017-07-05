@@ -33,7 +33,10 @@
     <div class="col-5" id="right-main-content">
       <app-menu></app-menu>
       <div class="right-inside-content">
-        <app-invoice-detail [watchClick]="invoiceUpdate" [exportedInvoice]="selectedInvoice"></app-invoice-detail>
+        <app-invoice-detail 
+          [onInvoiceMasterChange]="invoiceUpdate" 
+          [invoice]="selectedInvoice">
+        </app-invoice-detail>
       </div>
     </div>
   </div>

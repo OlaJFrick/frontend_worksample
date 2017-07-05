@@ -1,0 +1,24 @@
+<table class="table table-bordered table-hover master-invoices">
+  <thead>
+    <tr>
+      <td class="table-caption" colspan="5">{{header}}</td>
+    </tr>
+    <tr>
+      <th *ngFor="let iProp of iProps, let i = index" (click)="filteredBy(iProps[i])" [class.selectedcolumn]="filtername === iProp">
+        <a >{{iProps[i]}}</a>
+        <fa [name]="'caret-down'"></fa>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let invoice of invoiceData | orderBy: [currentFilter]"
+        (click)="onSelect(invoice)"
+        [class.selected]="invoice === selectedInvoice">
+      <td>{{invoice.type}}</td>
+      <td>{{invoice.accountname}}</td>
+      <td>{{isActive(invoice.status)}}</td>
+      <td>{{invoice.currency}}</td>
+      <td><span>{{getBalance(invoice.balance)}}</span>{{balance | currency:'USD':true:'3.2-2'}}</td>
+    </tr>
+  </tbody>
+</table>
