@@ -17,7 +17,7 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
       state('in', style({opacity: '1'})),
       transition('void => *', [
         style({opacity: '0'}),
-        animate('800ms 3500ms ease')
+        animate('800ms 4500ms ease')
       ])
     ]),
     trigger('iconAnimation', [
@@ -49,8 +49,8 @@ export class StartScreenComponent implements OnInit {
   welcomeMsg: string = 'Explore the world\'s top invoice manager';
 
   ngOnInit() {
-    setTimeout(() => { this.animateBg(); }, 3000);
-    setTimeout(() => { this.animateIcon(); }, 4500);
+    setTimeout(() => { this.animateBg(); }, 4000);
+    setTimeout(() => { this.animateIcon(); }, 5500);
   }
 
   animateBg() {

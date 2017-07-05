@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InvoiceService } from './services/invoice.service';
 
 import { AppComponent } from './app.component';
 import { StartScreenComponent } from './start-screen/start-screen.component';

@@ -6,18 +6,18 @@
   width: 100vw;
   height: 100vh;
 
-    .msg {
-      position: absolute;
-      bottom: 40vh;
-      left: 0;
-      right: 0;
-      width: 500px;
-      text-align: center;
-      margin: 0 auto;
-      color: $color-white;
-      font-size: 2em;
-      font-family: $fancy-font;
-    }
+  .msg {
+    position: absolute;
+    bottom: 40vh;
+    left: 0;
+    right: 0;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    color: $color-white;
+    font-size: 2em;
+    font-family: $fancy-font;
+  }
 }
 
 .startscreen-content {
@@ -31,7 +31,7 @@
   .screen-shader {
     width: 100vw;
     height: 100vh;
-    background:rgba(0,74,159,0.6);
+    background: rgba(0, 74, 159, 0.6);
 
     .msg {
       position: absolute;
@@ -59,15 +59,14 @@
           margin: 0 auto;
           @include ease-transition;
 
-          .i-check { 
-            font-size: 2.8em; 
+          .i-check {
+            font-size: 2.8em;
           }
         }
         
         .i-circle:hover {
-          background: rgba(255,255,255,0.3);
+          background: rgba(255, 255, 255, 0.3);
         }
-        
       }
     }
   }
