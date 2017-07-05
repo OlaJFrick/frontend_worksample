@@ -21,7 +21,7 @@ $fancy-font: 'Raleway', sans-serif;
 
 //== Mixins
 
-.linear-transition {
+@mixin linear-transition {
 transition-property: opacity, filter;
 transition-duration: 0.65s;
 transition-timing-function: linear;
@@ -34,7 +34,7 @@ transition-timing-function: linear;
 	transition: all 0.5s ease;
 }
 
-.centered-background {
+@mixin centered-background {
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,7 +42,7 @@ transition-timing-function: linear;
   background-size: cover;
 }
 
-.box-shadow {
+@mixin box-shadow {
 	--webkit-box-shadow: 4px 0px 20px -7px rgba(115,15,15,1);
 	-moz-box-shadow: 4px 0px 20px -7px rgba(115,15,15,1);
 	box-shadow: 4px 0px 20px -7px rgba(115,15,15,1);
