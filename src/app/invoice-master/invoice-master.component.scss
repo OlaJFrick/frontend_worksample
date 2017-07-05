@@ -1,18 +1,6 @@
 @import '../../styles.scss';
 
-// == Table Content
-
-.selectedcolumn {
-  background: $color-toned;
-  @include ease-transition;
-}
-
-.selected {
-  background: $color-toned;
-  border-left: 2px solid $color-blue-dark;
-}
-
-.master-invoices {
+.table-bordered {
   margin-top: 2rem;
   font-size: 0.8rem;
   @include box-shadow;
@@ -22,15 +10,30 @@
     font-size: 1.1rem;
     font-weight: 500;
   }
+
   td {
     border: none;
   }
+
   th {
     border-right: 0;
     border-left: 0;
     vertical-align: text-top;
   }
+
   i {
     margin-left: 0.4rem;
   }
+}
+
+// == Selected 
+
+.selected-invoice-property {
+  background: $color-grey;
+  @include ease-transition;
+}
+
+.selected-invoice-row {
+  background: $color-grey;
+  border-left: 2px solid $color-blue-dark;
 }

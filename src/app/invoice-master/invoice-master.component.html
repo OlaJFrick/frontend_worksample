@@ -1,24 +1,32 @@
-<table class="table table-bordered table-hover master-invoices">
+<table class="table table-bordered table-hover">
+ 
   <thead>
     <tr>
       <td class="table-caption" colspan="5">{{header}}</td>
     </tr>
+
     <tr>
-      <th *ngFor="let iProp of iProps, let i = index" (click)="filteredBy(iProps[i])" [class.selectedcolumn]="filtername === iProp">
-        <a >{{iProps[i]}}</a>
+      <th 
+        *ngFor="let item of props, let i = index"
+        [class.selected-invoice-property]="filtername === item"
+        (click)="filteredBy(props[i])" >
+        <a>{{props[i]}}</a>
         <fa [name]="'caret-down'"></fa>
       </th>
     </tr>
   </thead>
+
   <tbody>
-    <tr *ngFor="let invoice of invoiceData | orderBy: [currentFilter]"
-        (click)="onSelect(invoice)"
-        [class.selected]="invoice === selectedInvoice">
+    <tr 
+      *ngFor="let invoice of invoiceData | orderBy: [currentFilter]" 
+      [class.selected-invoice-row]="invoice === selectedInvoice"
+      (click)="onSelect(invoice)">
       <td>{{invoice.type}}</td>
       <td>{{invoice.accountname}}</td>
-      <td>{{isActive(invoice.status)}}</td>
+      <td>{{invoice.status ? "Active" : "Deactivated"}}</td>
       <td>{{invoice.currency}}</td>
-      <td><span>{{getBalance(invoice.balance)}}</span>{{balance | currency:'USD':true:'3.2-2'}}</td>
+      <td>{{invoice.balance | currency:'USD':true:'3.2-2'}}</td>
     </tr>
   </tbody>
+
 </table>

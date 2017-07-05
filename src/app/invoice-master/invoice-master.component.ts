@@ -11,16 +11,13 @@ export class InvoiceMasterComponent implements OnChanges {
   @Output() invoiceUpdate = new EventEmitter();
   @Input() invoiceData: Invoice;
   @Input() onMenuChange: string = '';
+  selectedInvoice: Invoice;
   header = 'Invoices';
-  iProps = ['Type', 'Account Name', 'Status', 'Currency', 'Balance'];
+  props = ['Type', 'Account Name', 'Status', 'Currency', 'Balance'];
+  filtername: '';
   reverseOrder = '';
   toggleState = true;
   currentFilter = '';
-  balance = '';
-  selectedInvoice: Invoice;
-  filtername: '';
-
-  constructor() { }
 
   ngOnChanges() {
     this.filteredBy(this.onMenuChange);
@@ -33,17 +30,11 @@ export class InvoiceMasterComponent implements OnChanges {
 
   filteredBy(arg) {
     this.filtername = arg;
+
+    // Toggle to reverse table order
     this.reverseOrder = this.toggleState ? "-" : "";
     this.toggleState = !this.toggleState;
     let sortedArg = this.reverseOrder + arg;
     this.currentFilter = sortedArg.toLowerCase().split(' ').join('');
   }
-
-  isActive(arg) {
-    let isActive = arg ? "Active" : "Deactivated";
-    return isActive;
-  }
-  
-  getBalance(sum) { this.balance = sum; }
-
 }
