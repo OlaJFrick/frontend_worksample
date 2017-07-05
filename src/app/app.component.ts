@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   template: `
   <app-home *ngIf="introLoaded"></app-home>
   <!-- Comment out to temp bypass startScreen -->
-  <!-- <app-start-screen (onIntroChange)="handleIntroChange($event)"></app-start-screen> -->
+  <app-start-screen (onIntroChange)="handleIntroChange($event)"></app-start-screen>
   `
 })
 
 export class AppComponent {
 /* OOOOBS REMEMEBER: introLoaded: boolean = false;*/
-  introLoaded: boolean = true;
+  introLoaded: boolean = false;
 
   handleIntroChange() {
     this.introLoaded = true;

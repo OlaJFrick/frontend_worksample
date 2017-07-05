@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { trigger, style, state, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import { Component } from '@angular/core';
+import { trigger, style, state, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-menu',
@@ -32,7 +32,6 @@ import { trigger, style, state, transition, animate, keyframes, query, stagger }
 })
 
 export class MenuComponent {
-  @Output() watchClick = new EventEmitter();
   menuProps = ['Invoices', 'Account', 'Favorite', 'Settings'];
   faIcons = ['money', 'user-circle-o', 'star', 'sign-in'];
   state: string = 'start';
@@ -43,6 +42,5 @@ export class MenuComponent {
   animateMe() {
     this.state = (this.state === 'start' ? 'finish' : 'start');
     this.menuState = !this.menuState;
-    this.watchClick.emit(this.menuState);
   }
 }
