@@ -1,9 +1,9 @@
-<div *ngIf="invoice">
-
-  <div class="card detail-card">
-    <img class="card-img-top" [src]="imgPath + invoice.img" [@fadeAnimation]="clickState">
-
-    <div class="card-block" [@fadeAnimation]="clickState">
+<div *ngIf="invoice" [@fadeInAnimation]>
+  <div class="card detail-card" 
+   [@fadeBetweenAnimation]="clickState"
+    (click)="closeCard()">
+    <img class="card-img-top" [src]="imgPath + invoice.img">
+    <div class="card-block">
       <h4 class="card-title">{{invoice.accountname}}</h4>
       
       <table class="detail-table">
@@ -37,3 +37,4 @@
   </div>
 
 </div>
+<!--[@fadeBetweenAnimation]="clickState"-->

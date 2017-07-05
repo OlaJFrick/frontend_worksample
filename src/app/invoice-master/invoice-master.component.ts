@@ -37,4 +37,5 @@ export class InvoiceMasterComponent implements OnChanges {
     let sortedArg = this.reverseOrder + arg;
     this.currentFilter = sortedArg.toLowerCase().split(' ').join('');
   }
+
 }
