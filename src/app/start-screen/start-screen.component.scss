@@ -1,10 +1,11 @@
 @import '../../styles.scss';
 
 .intro {
-  position: fixed;
+/*  position: fixed;*/
   background: $color-blue-dark;
   width: 100vw;
   height: 100vh;
+  z-index: 10;
 
   .msg {
     position: absolute;
@@ -18,6 +19,7 @@
     font-size: 2em;
     font-family: $fancy-font;
   }
+
 }
 
 .startscreen-content {
@@ -46,7 +48,16 @@
       .welcome-header {
         font-size: 1.5em;
         font-family: $fancy-font;
-        padding-bottom: 4vh;
+        padding-bottom: 3vh;
+      }
+
+      .logo {
+        position: absolute;
+        top: -90px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 85px;
       }
 
       .enter-icon {

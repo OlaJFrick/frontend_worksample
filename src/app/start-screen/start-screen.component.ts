@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, style, state, transition, animate } from '@angular/animations';
 
 @Component({
@@ -42,6 +42,7 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
 })
 
 export class StartScreenComponent implements OnInit {
+  @Output() onIntroChange = new EventEmitter();
   bgState: string = 'up';
   changeState: string = 'off';
   intro: boolean = true;
@@ -60,5 +61,6 @@ export class StartScreenComponent implements OnInit {
   animateIcon() {
     this.changeState = (this.changeState === 'on' ? 'off' : 'on');
     this.intro = false;
+    this.onIntroChange.emit();
   }
 }

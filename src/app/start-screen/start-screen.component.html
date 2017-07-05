@@ -5,6 +5,7 @@
 <div class="startscreen-content" [@hideScreenAnimation]="bgState">
   <div class="screen-shader">
     <article class="msg">
+      <img class="logo" src="../../assets/images/logo.png" alt="app-logo" [@msgAnimation]>
       <h1 class="welcome-header" [@msgAnimation]>{{welcomeMsg}}</h1>
       <div class="enter-icon" 
           (click)="animateBg()" 
