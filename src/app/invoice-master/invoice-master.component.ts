@@ -10,17 +10,20 @@ import { Invoice } from '../classes/invoice';
 export class InvoiceMasterComponent implements OnChanges {
   @Output() invoiceUpdate = new EventEmitter();
   @Input() invoiceData: Invoice;
-  @Input() onMenuChange: string = '';
+  // @Input() onSidebarChange: string;
+  @Input() filterChange: string = '';
+  @Input() toggleMenu: boolean = true;
   selectedInvoice: Invoice;
   header = 'Invoices';
   props = ['Type', 'Account Name', 'Status', 'Currency', 'Balance'];
-  filtername: '';
+  selectedType: '';
   reverseOrder = '';
   toggleState = true;
-  currentFilter = '';
+  selectedFilter = '';
 
   ngOnChanges() {
-    this.filteredBy(this.onMenuChange);
+    this.filteredBy(this.filterChange);
+    console.log(this.toggleMenu);
   }
 
   onSelect(invoice: Invoice): void {
@@ -28,14 +31,12 @@ export class InvoiceMasterComponent implements OnChanges {
     this.invoiceUpdate.emit(this.selectedInvoice);
   }
 
-  filteredBy(arg) {
-    this.filtername = arg;
-
-    // Toggle to reverse table order
+  filteredBy(selectedItem) {
+    this.selectedType = selectedItem;
+     // MenuToggle to reverse table order 
     this.reverseOrder = this.toggleState ? "-" : "";
     this.toggleState = !this.toggleState;
-    let sortedArg = this.reverseOrder + arg;
-    this.currentFilter = sortedArg.toLowerCase().split(' ').join('');
+    let formatedSearch = this.reverseOrder + selectedItem;
+    this.selectedFilter = formatedSearch.toLowerCase().split(' ').join('');
   }
-
 }

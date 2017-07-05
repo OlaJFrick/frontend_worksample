@@ -1,14 +1,12 @@
 <table class="table table-bordered table-hover">
- 
   <thead>
     <tr>
       <td class="table-caption" colspan="5">{{header}}</td>
     </tr>
-
     <tr>
       <th 
         *ngFor="let item of props, let i = index"
-        [class.selected-invoice-property]="filtername === item"
+        [class.selected-invoice-property]="selectedType === item"
         (click)="filteredBy(props[i])" >
         <a>{{props[i]}}</a>
         <fa [name]="'caret-down'"></fa>
@@ -18,7 +16,7 @@
 
   <tbody>
     <tr 
-      *ngFor="let invoice of invoiceData | orderBy: [currentFilter]" 
+      *ngFor="let invoice of invoiceData | orderBy: [selectedFilter]" 
       [class.selected-invoice-row]="invoice === selectedInvoice"
       (click)="onSelect(invoice)">
       <td>{{invoice.type}}</td>

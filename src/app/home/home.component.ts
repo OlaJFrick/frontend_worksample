@@ -40,15 +40,17 @@ import { trigger, style, state, transition, animate, keyframes, query, stagger }
 
 export class HomeComponent implements OnInit {
   @Output() FilterChange = new EventEmitter();
+  @Output() sidebarUpdate = new EventEmitter();
   invoices: Invoice[];
   selectedInvoice: Invoice;
   heading: string = 'All invoices - 2017';
-  currentFilter: string = '';
+  currentFilter: string;
   selectedIcon = 'dots';
   iProps = ['Type', 'Account Name', 'Status', 'Currency', 'Balance'];
   invoiceUpdate: boolean = false;
   isOpen: boolean = false;
   menuItems = [];
+  menuClickToggle: boolean = false;
  
   constructor(private invoiceService: InvoiceService) {
   }
@@ -84,6 +86,7 @@ export class HomeComponent implements OnInit {
   }
 
   updateFilter(arg, i) {
+    this.menuClickToggle = !this.menuClickToggle;
     let filterName; 
 
     if (i == 0) {

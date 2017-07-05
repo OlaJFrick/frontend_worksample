@@ -22,7 +22,8 @@
           <div class="col-12">
             <app-invoice-master 
               [invoiceData]="invoices" 
-              [onMenuChange]="currentFilter"
+              [filterChange]="currentFilter" 
+              [toggleMenu]="menuClickToggle" 
               (invoiceUpdate)="handleInvoiceUpdate($event)">
             </app-invoice-master>
           </div>
