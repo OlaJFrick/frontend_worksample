@@ -1,0 +1,19 @@
+<div class="menu-content">
+
+  <div class="menu-popup" [@menuSlideAnimation]="state">
+    <ul [@menuItemsAni]="state">
+      <li *ngFor="let icon of faIcons, let prop of menuProps, let i = index">
+      <fa name="{{faIcons[i]}}"></fa>{{menuProps[i]}}
+    </li>
+  </ul>
+  </div>
+
+  <div class="menu-icon" (click)="animateMe()">
+    <button class="hamburger hamburger--spin" [class.is-active]="menuState">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+
+</div>
