@@ -8,7 +8,7 @@
   .main-title {
     position: relative;
     height: 3rem;
-    
+
     .title {
       position: absolute;
       margin: 0;
@@ -34,12 +34,14 @@
 
 #right-main-content {
   position: fixed;
+  top:0;
   height: 100vh;
   right: 0;
   background-color: $color-blue-dark;
   background-image: url('../../assets/images/spaceneedle_fixed_wider.png');
   background-position: 50% center;
   background-repeat: no-repeat;
+  background-size: 120%;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -118,3 +120,4 @@
     }
   }
 }
+

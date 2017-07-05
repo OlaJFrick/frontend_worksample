@@ -11,7 +11,7 @@ import { trigger, style, state, transition, animate, keyframes, query, stagger }
         width: '0'
       })),
       state('finish', style({
-        width: '38vw'
+        width: '37vw'
       })),
       transition('start => finish', animate('300ms linear')),
       transition('finish => start', animate('200ms 200ms linear')),
