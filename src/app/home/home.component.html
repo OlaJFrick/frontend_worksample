@@ -24,7 +24,7 @@
               [invoiceData]="invoices" 
               [filterChange]="currentFilter" 
               [toggleMenu]="menuClickToggle" 
-              (invoiceUpdate)="handleInvoiceUpdate($event)">
+              (invoiceUpdate)="handleUpdate($event)">
             </app-invoice-master>
           </div>
         </div>
@@ -35,7 +35,7 @@
       <app-menu></app-menu>
       <div class="right-inside-content">
         <app-invoice-detail 
-          [onInvoiceMasterChange]="invoiceUpdate" 
+          [onMasterUpdate]="invoiceUpdate" 
           [invoice]="selectedInvoice">
         </app-invoice-detail>
       </div>
@@ -46,7 +46,6 @@
 
 <div id="filter-menu" *ngIf="isOpen" [@sideBarAnimation]>
   <img src="../assets/images/business.jpg">
-  <img class="logo" src="../assets/images/logo.png">
   <ul [@menuAnimation]="menuItems.length">
     <li *ngFor="let item of menuItems, let i = index" (click)="updateFilter(item, i)">
       <div class="list-body">
