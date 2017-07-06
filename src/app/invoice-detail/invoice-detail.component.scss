@@ -2,8 +2,8 @@
 
 .detail-card {
   background: $color-blue-dark;
-  width: 24rem;
   top: 10rem;
+  width: 24rem;
   padding: 0;
   border: 0;
   @include box-shadow;
@@ -21,14 +21,14 @@
       color: $color-blue-light;
     }
     .detail-table {
-      font-size: 13px;
-      color: $color-grey-dark;
       width: 100%;
       padding: 20px;
+      font-size: 13px;
+      color: $color-grey-dark;
 
       th {
-        font-size: 12px;
         width: 50%;
+        font-size: 12px;
       }
       td {
         vertical-align: text-top;

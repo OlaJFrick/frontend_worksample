@@ -29,9 +29,9 @@
   height: 100vh;
 
   .screen-shader {
+    background: rgba(0, 74, 159, 0.6);
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 74, 159, 0.6);
 
     .msg {
       position: absolute;
@@ -44,9 +44,9 @@
       color: $color-white;
 
       .welcome-header {
+        padding-bottom: 3vh;
         font-size: 1.5em;
         font-family: $fancy-font;
-        padding-bottom: 3vh;
       }
 
       .logo {
@@ -61,11 +61,11 @@
       .enter-icon {
 
         .i-circle {
+          margin: 0 auto;
           width: 70px;
           height: 70px;
           border: 2px solid $color-white;
           border-radius: 50%;
-          margin: 0 auto;
           @include ease-transition;
 
           .i-check {

@@ -51,12 +51,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: $color-blue-dark;
 }
-
-::-webkit-scrollbar {
-  width: 1.2rem;
-  background: $color-dark;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $color-white;
-}
