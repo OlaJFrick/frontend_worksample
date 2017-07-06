@@ -29,7 +29,7 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
       })),
       transition('on <=> off', animate('700ms 50ms ease'))
     ]),
-    trigger('hideScreenAnimation', [
+    trigger('toggleScreenAnimation', [
       state('down', style({
         top: '0px'
       })),

@@ -10,7 +10,6 @@ import { Invoice } from '../classes/invoice';
 export class InvoiceMasterComponent implements OnChanges {
   @Output() invoiceUpdate = new EventEmitter();
   @Input() invoiceData: Invoice;
-  // @Input() onSidebarChange: string;
   @Input() filterChange: string = '';
   @Input() toggleMenu: boolean = true;
   selectedInvoice: Invoice;
@@ -23,7 +22,6 @@ export class InvoiceMasterComponent implements OnChanges {
 
   ngOnChanges() {
     this.filteredBy(this.filterChange);
-    console.log(this.toggleMenu);
   }
 
   onSelect(invoice: Invoice): void {
@@ -33,7 +31,7 @@ export class InvoiceMasterComponent implements OnChanges {
 
   filteredBy(selectedItem) {
     this.selectedType = selectedItem;
-     // MenuToggle to reverse table order 
+    // MenuToggle to reverse table order 
     this.reverseOrder = this.toggleState ? "-" : "";
     this.toggleState = !this.toggleState;
     let formatedSearch = this.reverseOrder + selectedItem;

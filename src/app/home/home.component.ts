@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
     this.selectedIcon = (this.selectedIcon === 'dots' ? 'close-round' : 'dots');
   }
 
-  handleInvoiceUpdate($event) {
+  handleUpdate($event) {
     this.invoiceUpdate = !this.invoiceUpdate;
     this.selectedInvoice = $event;
   }

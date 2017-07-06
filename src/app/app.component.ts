@@ -3,17 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <app-home *ngIf="introLoaded"></app-home>
-  <!-- Comment out to temp bypass startScreen -->
-  <app-start-screen (onIntroChange)="handleIntroChange($event)"></app-start-screen>
+  <app-home *ngIf="isLoaded"></app-home>
+  <app-start-screen (onIntroChange)="handleIntroUpdate($event)"></app-start-screen>
   `
 })
 
 export class AppComponent {
-/* OOOOBS REMEMEBER: introLoaded: boolean = false;*/
-  introLoaded: boolean = false;
+  isLoaded: boolean = false;
 
-  handleIntroChange() {
-    this.introLoaded = true;
+  handleIntroUpdate() {
+    this.isLoaded = true;
   }
 }

@@ -28,18 +28,17 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 
 export class InvoiceDetailComponent implements OnChanges {
   @Input('invoice') invoice: Invoice;
-  @Input() onInvoiceMasterChange: boolean = false;
+  @Input() onMasterUpdate: boolean = false;
   props: string[] = ['Type', 'Account Name', 'Status', 'Currency', 'Balance', 'Notes'];
   notes: string = 'Lorem ipsum dolor sit amet, consectetur';
   imgPath: string =  '../../assets/images/';
   clickState: string = 'in';
 
   ngOnChanges() {
-    if (!this.onInvoiceMasterChange) {
+    if (!this.onMasterUpdate) {
       this.clickState = 'out';
     } else {
       this.clickState = 'in';
-
     }
   }
 

@@ -7,12 +7,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OrderByPipe implements PipeTransform {
 
   transform(value: Object[], args: string[]): any {
-
     if (!value)
       return value;
 
     return value.slice().sort((a, b) => {
-      
+
       for (let arg of args) {
         let descending = false;
 
@@ -30,4 +29,5 @@ export class OrderByPipe implements PipeTransform {
     });
   }
 }
+
 

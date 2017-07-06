@@ -8,23 +8,19 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
   animations: [
     trigger('menuSlideAnimation', [
       state('start', style({
-        width: '0'
-      })),
+        width: '0'})),
       state('finish', style({
-        width: '37vw'
-      })),
+        width: '37vw'})),
       transition('start => finish', animate('300ms linear')),
       transition('finish => start', animate('200ms 200ms linear')),
     ]),
     trigger('menuItemsAni', [
       state('start', style({
         transform: 'translateX(60px)',
-        opacity: 0
-      })),
+        opacity: 0 })),
       state('finish', style({
         transform: 'translateX(0)',
-        opacity: 1
-      })),
+        opacity: 1 })),
       transition('start => finish', animate('200ms 300ms')),
       transition('finish => start', animate('100ms 100ms ease-out')),
     ]),
@@ -35,7 +31,6 @@ export class MenuComponent {
   menuProps = ['Invoices', 'Account', 'Favorite', 'Settings'];
   faIcons = ['money', 'user-circle-o', 'star', 'sign-in'];
   state: string = 'start';
-
   menuState = false;
   dropState: string = 'in';
 
